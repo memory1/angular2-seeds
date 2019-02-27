@@ -9,6 +9,16 @@
     <div class="form-group">
         <label>Last Name:</label>
         <input type="text" required class="form-control"  name="lastname" ngModel>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" name="is-full-time" ngModel>Is Fulltime</label>
+    </div>
+    <label>Payment Type</label>
+    <div class="radio">
+      <label><input type="radio" name="pay-type" value="w2" checked>w2</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="pay-type" value="1099">1099</label>
       </div>
     <button class="btn btn-primary" type="submit">Ok</button>
   </form>
