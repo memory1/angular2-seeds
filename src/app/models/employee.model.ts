@@ -1,4 +1,3 @@
-
 export class Employee {
     constructor(
         public firstName: string,
@@ -7,6 +6,6 @@ export class Employee {
         public paymentType: string,
         public primaryLanguage: string
     ) {
-        
+
     }
 }
