@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent {
   languages = ["English","Spanish"];
-  model = new Employee('Dala','Smith',true,"w2","spanish");
+  model = new Employee('qala','Smith',true,"W2","Spanish");
   hasPrimaryLanguageError = false;
 
   constructor(private formPoster: FormPoster){

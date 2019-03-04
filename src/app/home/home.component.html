@@ -43,7 +43,7 @@
                     name="primaryLanguage"
                     (blur)= "validatePrimaryLanguage(primaryLanguage.value)"
                     [(ngModel)]="model.primaryLanguage">
-                  <option value = "default">Select a Language ...</option>
+                   <option value = "default">Select a Language ...</option>
                     <option *ngFor="let lang of languages">
                     {{ lang }}
                 </option>
