@@ -21,6 +21,7 @@ export class FormPoster {
   }
   handleError(err: any) {
     console.error("Post Error:" + err);
+    console.error(err.statusText);
     return Observable.throw(err.statusText);
   }
   extractData(res: Response){
