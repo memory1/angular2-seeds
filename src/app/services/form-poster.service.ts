@@ -16,8 +16,9 @@ export class FormPoster {
     let headers = new Headers({'Content-type':'applicatoin/json'});
     let options = new RequestOptions({headers:headers});
     return this.http.post("http://localhost:3100/postemployee", body, options)
-                          .map(this.extractData)
-                          .catch(this.handleError);
+                    .delay(5000)
+                    .map(this.extractData)
+                    .catch(this.handleError);
   }
   handleError(err: any) {
     console.error("Post Error:" + err);
