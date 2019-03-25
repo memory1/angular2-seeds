@@ -10,6 +10,16 @@ export class FormPoster {
 
   }
 
+  getLanguages() : Observable<any> {
+    return this.http.get('http://localhost:3100/get-languages')
+                .map(this.extractLanguages)
+                .catch(this.handleError);
+  }
+
+  private extractLanguages(res: Response){
+    let body = res.json();
+    return body.fields || {};
+  }
   postEmployeeForm(employee: Employee):Observable<any>{
     console.log("posting employee:" + employee);
     let body = JSON.stringify(employee);

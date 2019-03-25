@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Observable';
 import {Component} from '@angular/core';
 import { Employee } from '../models/employee.model';
 import { FormPoster } from '../services/form-poster.service';
@@ -13,9 +14,13 @@ export class HomeComponent {
   model = new Employee('qala','Smith',true,"W2","Spanish");
   hasPrimaryLanguageError = false;
 
-  constructor(private formPoster: FormPoster){
+  constructor(private formPoster: FormPoster ){
 
   }
+
+
+  }
+
   validatePrimaryLanguage(value){
     if (value === "default")
       this.hasPrimaryLanguageError = true;
