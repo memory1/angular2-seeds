@@ -20,6 +20,8 @@ export class HomeComponent {
           data => this.languages = data.languages,
           err => console.log('get error:', err)
         );
+
+        console.log(this.languages);
   }
 
 

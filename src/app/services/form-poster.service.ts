@@ -18,6 +18,7 @@ export class FormPoster {
 
   private extractLanguages(res: Response){
     let body = res.json();
+    console.log(body);
     return body.fields || {};
   }
   postEmployeeForm(employee: Employee):Observable<any>{
