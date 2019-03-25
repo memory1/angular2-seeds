@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
-  languages = ["English","Spanish"];
+  languages = [];
   model = new Employee('qala','Smith',true,"W2","Spanish");
   hasPrimaryLanguageError = false;
 
@@ -21,7 +21,7 @@ export class HomeComponent {
           err => console.log('get error:', err)
         );
 
-        console.log(this.languages);
+        console.log("languages: " + this.languages);
   }
 
 
