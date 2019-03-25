@@ -15,11 +15,13 @@ export class HomeComponent {
   hasPrimaryLanguageError = false;
 
   constructor(private formPoster: FormPoster ){
-
+    this.formPoster.getLanguages()
+        .subscribe(
+          data => this.languages = data.languages,
+          err => console.log('get error:', err)
+        );
   }
 
-
-  }
 
   validatePrimaryLanguage(value){
     if (value === "default")
